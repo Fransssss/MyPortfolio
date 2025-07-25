@@ -1,4 +1,11 @@
-    /* Reset some basic defaults */
+    :root {
+    --bg-color: #111;
+    --card-bg: #1c1c1c;
+    --text-color: #eee;
+    --accent-color: #00ffd1;
+    --font-family: 'Segoe UI', sans-serif;
+    }
+
     * {
     margin: 0;
     padding: 0;
@@ -6,91 +13,119 @@
     }
 
     body {
-    background-color: #0e0e0e; /* rich dark */
-    color: #e0e0e0;            /* soft light gray */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
     line-height: 1.6;
     padding: 20px;
     }
 
-    /* Smooth luxurious spacing */
-    header, main, footer {
-    max-width: 1000px;
-    margin: auto;
-    padding: 30px 0;
-    border-bottom: 1px solid #2a2a2a;
+    header {
+    text-align: center;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #333;
     }
 
     header h1 {
-    font-size: 2.5em;
-    color: #ffffff;
-    margin-bottom: 10px;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
     }
 
-    nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
+    h2, #my-email {
+        display: flex;
+        justify-content: center;
+    }
+
+    header p {
+    font-size: 1.2rem;
+    color: #aaa;
+    }
+
+    nav {
+    margin-top: 1rem;
     }
 
     nav a {
-    color: #bbb;
+    color: var(--accent-color);
+    margin: 0 12px;
     text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s;
+    font-weight: bold;
     }
 
     nav a:hover {
-    color: #ffffff;
+    text-decoration: underline;
     }
 
-    /* Section headings */
-    section h2 {
-    font-size: 1.8em;
-    color: #f0f0f0;
-    margin-bottom: 15px;
+    main {
+    margin-top: 2rem;
     }
 
-    /* Paragraphs and text blocks */
-    section p, section ul {
-    color: #ccc;
-    font-size: 1.05em;
-    margin-bottom: 15px;
+    h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--accent-color);
     }
 
-    /* Skills list */
-    #skills ul {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+    .project-card {
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,255,209,0.1);
     }
 
-    #skills li {
-    background-color: #1a1a1a;
-    padding: 8px 12px;
-    border-radius: 5px;
+    .project-card h3 {
+    font-size: 1.4rem;
+    color: #fff;
+    }
+
+    .project-card p {
+    margin: 0.5rem 0 1rem;
+    }
+
+    .project-card img {
+    max-width: 100%;
+    border-radius: 8px;
     border: 1px solid #333;
-    color: #eee;
     }
 
-    /* Footer */
+    #contact a {
+    color: #a8dadc;
+    text-decoration: none;
+    font-weight: 500;
+    }
+
+    #contact a:hover {
+    color: #f1faee;
+    text-decoration: underline;
+    }
+
     footer {
-    text-align: center;
-    font-size: 0.9em;
-    color: #777;
-    padding-top: 20px;
-    border: none;
-    }
-
-    /* Responsive layout */
-    @media (max-width: 600px) {
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    header h1 {
-        font-size: 2em;
         text-align: center;
+        margin-top: 3rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid #333;
+        color: #888;
     }
+
+    footer a {
+    color: var(--accent-color);
+    }
+
+    /* Active nav link */
+    nav a.active {
+        text-decoration: underline;
+        color: #fff;
+    }
+
+    /* Smooth fade-in */
+    .hidden {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.6s ease-out;
+    }
+
+    .fade-in {
+        opacity: 1;
+        transform: translateY(0);
     }
