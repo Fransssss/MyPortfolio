@@ -1,0 +1,96 @@
+    /* Reset some basic defaults */
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+
+    body {
+    background-color: #0e0e0e; /* rich dark */
+    color: #e0e0e0;            /* soft light gray */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+    }
+
+    /* Smooth luxurious spacing */
+    header, main, footer {
+    max-width: 1000px;
+    margin: auto;
+    padding: 30px 0;
+    border-bottom: 1px solid #2a2a2a;
+    }
+
+    header h1 {
+    font-size: 2.5em;
+    color: #ffffff;
+    margin-bottom: 10px;
+    }
+
+    nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    }
+
+    nav a {
+    color: #bbb;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+    }
+
+    nav a:hover {
+    color: #ffffff;
+    }
+
+    /* Section headings */
+    section h2 {
+    font-size: 1.8em;
+    color: #f0f0f0;
+    margin-bottom: 15px;
+    }
+
+    /* Paragraphs and text blocks */
+    section p, section ul {
+    color: #ccc;
+    font-size: 1.05em;
+    margin-bottom: 15px;
+    }
+
+    /* Skills list */
+    #skills ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    }
+
+    #skills li {
+    background-color: #1a1a1a;
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: 1px solid #333;
+    color: #eee;
+    }
+
+    /* Footer */
+    footer {
+    text-align: center;
+    font-size: 0.9em;
+    color: #777;
+    padding-top: 20px;
+    border: none;
+    }
+
+    /* Responsive layout */
+    @media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    header h1 {
+        font-size: 2em;
+        text-align: center;
+    }
+    }
